@@ -69,7 +69,7 @@ const greeting = (word) => {
 const speaker = (words, callback) => {
   let newArr = [];
   words.forEach((word) => {
-    word = greeting(word);
+    word = callback(word);
     newArr.push(word);
   });
   return newArr;
@@ -97,7 +97,7 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   for(let i = 0; i < times; i++) {
-    addValues(arr, num);
+    callback(arr, num);
   }
   return arr;
 };
