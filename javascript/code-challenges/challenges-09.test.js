@@ -19,7 +19,12 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301',
+  duration: {
+    dayTrack: '4 weeks',
+    eveningTrack: '8 weeks'
+  },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -65,7 +70,7 @@ const updateNumbers = (obj) => {
   let arrLen = Object.keys(obj).length;
   let arr = [];
 
-  for(let i = 0; i < arrLen; i++) {
+  for (let i = 0; i < arrLen; i++) {
     arr.push(`${name[i]}: ${num[i]}`);
   }
   return arr;
@@ -79,8 +84,7 @@ CHALLENGE 5
 Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
 
-const characters = [
-  {
+const characters = [{
     name: 'Eddard',
     spouse: 'Catelyn',
     children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
@@ -141,16 +145,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  let values = arr.map(item => {
-    return Object.values(item);
+  let regex = /(?:children)/g;
+  let hasKids = false;
+  arr.forEach(person => {
+    person.name === character ?
+      hasKids = regex.test(Object.keys(person)) :
+      false;
   });
-  let result = false;
-  for (let i = 0; i < values.length; i++) {
-    if (values[i][0] === character && typeof values[i][2] === 'object') {
-      result = true;
-    }
-  }
-  return result;
+  return hasKids;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -243,11 +245,15 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should return true if the value is in the object', () => {
-    expect(checkValues({ class: '301' }, '301')).toBe(true);
+    expect(checkValues({
+      class: '301'
+    }, '301')).toBe(true);
   });
 
   test('It should return false if the value is not in the object', () => {
-    expect(checkValues({ class: '301' }, '401')).toBe(false);
+    expect(checkValues({
+      class: '301'
+    }, '401')).toBe(false);
   });
 });
 
@@ -299,13 +305,19 @@ xdescribe('Testing challenge 8', () => {
 
 xdescribe('Testing challenge 9', () => {
   test('It should return an object for each house containing the name and size', () => {
-    expect(houseSize(characters)[1]).toStrictEqual({ house: 'Arryn', members: 3 });
+    expect(houseSize(characters)[1]).toStrictEqual({
+      house: 'Arryn',
+      members: 3
+    });
     expect(houseSize(characters).length).toStrictEqual(7);
   });
 });
 
 xdescribe('Testing challenge 10', () => {
   test('It should not include any deceased spouses', () => {
-    expect(houseSurvivors(characters)[2]).toStrictEqual({ house: 'Lannister', members: 4 });
+    expect(houseSurvivors(characters)[2]).toStrictEqual({
+      house: 'Lannister',
+      members: 4
+    });
   });
 });
