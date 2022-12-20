@@ -4,7 +4,7 @@ Write a function called `insert_shift_array` which takes in an array and a value
 
 ## Whiteboard Process
 
-![Insert Shift Array](../img/insert_array_shift.png)
+![Insert Shift Array](./insert_shift_array.png)
 
 ## Approach & Efficiency
 
