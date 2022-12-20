@@ -5,7 +5,7 @@
 
 ## Whiteboard Process
 
-![reverseArray Whiteboard](../img/reverseArray_whiteboard.png)
+![reverseArray Whiteboard](./reverseArray_whiteboard.png)
 
 ## Approach & Efficiency
 
