@@ -80,3 +80,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Array Reverse](docs/array_reverse)
 * [Array Insert Shift](docs/array_insert_shift)
 * [Binary Search](docs/array_binary_search/)
+* [Linked List](docs/linked_list)
