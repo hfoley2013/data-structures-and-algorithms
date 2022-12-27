@@ -28,7 +28,7 @@ def test_populated_head():
 def test_to_string_empty():
     linked_list = LinkedList()
 
-    assert str(linked_list.to_string()) == "NULL"
+    assert str(linked_list) == "NULL"
 
 
 # @pytest.mark.skip("TODO")
@@ -37,7 +37,7 @@ def test_to_string_single():
 
     linked_list.insert("apple")
 
-    assert str(linked_list.to_string()) == "{ apple } -> NULL"
+    assert str(linked_list == "{ apple } -> NULL")
 
 
 # @pytest.mark.skip("TODO")
@@ -46,11 +46,11 @@ def test_to_string_double():
 
     linked_list.insert("apple")
 
-    assert str(linked_list.to_string()) == "{ apple } -> NULL"
+    assert str(linked_list) == "{ apple } -> NULL"
 
     linked_list.insert("banana")
 
-    assert str(linked_list.to_string()) == "{ banana } -> { apple } -> NULL"
+    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
 
 
 # @pytest.mark.skip("TODO")

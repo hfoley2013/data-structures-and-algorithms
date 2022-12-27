@@ -35,7 +35,7 @@ class LinkedList:
         node = node.next
     return False
 
-  def to_string(self):
+  def __str__(self):
     """
     Returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
     """
