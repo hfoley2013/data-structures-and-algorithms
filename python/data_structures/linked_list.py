@@ -42,7 +42,7 @@ class LinkedList:
     values = []
     node = self.head
     while node is not None:
-        values.append(str(node.value))
+        values.append("{ " + str(node.value) +" }")
         node = node.next
     if len(values) == 0:
         return "NULL"

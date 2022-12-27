@@ -24,33 +24,33 @@ def test_populated_head():
     assert linked.head.value == "apple"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_to_string_empty():
     linked_list = LinkedList()
 
-    assert str(linked_list) == "NULL"
+    assert str(linked_list.to_string()) == "NULL"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_to_string_single():
     linked_list = LinkedList()
 
     linked_list.insert("apple")
 
-    assert str(linked_list) == "{ apple } -> NULL"
+    assert str(linked_list.to_string()) == "{ apple } -> NULL"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_to_string_double():
     linked_list = LinkedList()
 
     linked_list.insert("apple")
 
-    assert str(linked_list) == "{ apple } -> NULL"
+    assert str(linked_list.to_string()) == "{ apple } -> NULL"
 
     linked_list.insert("banana")
 
-    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
+    assert str(linked_list.to_string()) == "{ banana } -> { apple } -> NULL"
 
 
 # @pytest.mark.skip("TODO")
@@ -74,21 +74,21 @@ def test_includes_false():
 
     assert not linked_list.includes("cucumber")
 
-def test_to_string():
-    linked_list = LinkedList()
-    linked_list.insert(1)
-    linked_list.insert(2)
-    linked_list.insert(3)
+# def test_to_string():
+#     linked_list = LinkedList()
+#     linked_list.insert(1)
+#     linked_list.insert(2)
+#     linked_list.insert(3)
 
-    assert linked_list.to_string() == "3 -> 2 -> 1 -> NULL"
+#     assert linked_list.to_string() == "3 -> 2 -> 1 -> NULL"
 
-def test_to_string_one_node():
-    linked_list = LinkedList()
-    linked_list.insert(1)
+# def test_to_string_one_node():
+#     linked_list = LinkedList()
+#     linked_list.insert(1)
 
-    assert linked_list.to_string() == "1 -> NULL"
+#     assert linked_list.to_string() == "1 -> NULL"
 
-def test_to_string_no_nodes():
-    linked_list = LinkedList()
+# def test_to_string_no_nodes():
+#     linked_list = LinkedList()
 
-    assert linked_list.to_string() == "NULL"
+#     assert linked_list.to_string() == "NULL"
