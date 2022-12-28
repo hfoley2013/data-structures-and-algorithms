@@ -14,6 +14,10 @@ Write the following methods for the Linked List class:
   * arguments: value, new value
   * adds a new node with the given new value immediately after the first node that has the value specified
 
+## Whiteboard
+
+![Linked List Insertion](./linked_list_insertion.png)
+
 ## Approach & Efficiency
 
 * `append`
