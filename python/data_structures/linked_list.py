@@ -35,6 +35,18 @@ class LinkedList:
         node = node.next
     return False
 
+  def append(self, value):
+    """
+    Takes a value as a parameter and appends it to the end of the list.
+    """
+    new_node = Node(value)
+    current_node = self.head
+    while current_node.next is not None:
+      current_node = current_node.next
+    current_node.next = new_node
+
+
+
   def __str__(self):
     """
     Returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
