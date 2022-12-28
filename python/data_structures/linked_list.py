@@ -8,6 +8,8 @@ class Node:
     self.value = value
     self.next = next
 
+class TargetError(Exception):
+  pass
 
 # Create a LinkedList class
 class LinkedList:
@@ -21,67 +23,88 @@ class LinkedList:
     """
     Adds a new node with that value to the head of the list with an O(1) Time performance.
     """
-    new_node = Node(value, self.head)
-    self.head = new_node
+    try:
+      new_node = Node(value, self.head)
+      self.head = new_node
+    except TargetError:
+      raise TargetError
 
   def includes(self, value):
     """
     Indicates whether that value exists as a Node’s value somewhere within the list.
     """
-    node = self.head
-    while node is not None:
-        if node.value == value:
-            return True
-        node = node.next
-    return False
+    try:
+      node = self.head
+      while node is not None:
+          if node.value == value:
+              return True
+          node = node.next
+      return False
+    except TargetError:
+      raise TargetError
 
   def append(self, value):
     """
     Takes a value as a parameter and appends it to the end of the list.
     """
-    new_node = Node(value)
-    current_node = self.head
-    while current_node.next is not None:
-      current_node = current_node.next
-    current_node.next = new_node
+    try:
+      new_node = Node(value)
+      current_node = self.head
+      while current_node.next is not None:
+        current_node = current_node.next
+      current_node.next = new_node
+    except TargetError:
+      raise TargetError
 
   def insert_before(self, value, new_value):
-    new_node = Node(new_value)
-    current_node = self.head
-    previous_node = None
-    if current_node.value is value:
-      self.head = new_node
-      new_node.next = current_node
-      return
-    while current_node is not None:
+    try:
+      new_node = Node(new_value)
+      current_node = self.head
+      previous_node = None
+      if current_node is None:
+        raise TargetError
       if current_node.value is value:
+        self.head = new_node
         new_node.next = current_node
-        previous_node.next = new_node
         return
-      previous_node = current_node
-      current_node = current_node.next
+      while current_node is not None:
+        if current_node.value is value:
+          new_node.next = current_node
+          previous_node.next = new_node
+          return
+        previous_node = current_node
+        current_node = current_node.next
+      raise TargetError
+    except TargetError:
+      raise TargetError
 
   def insert_after(self, value, new_value):
-    new_node = Node(new_value)
-    current_node = self.head
-    while current_node is not None:
-      if current_node.value is value:
-        new_node.next = current_node.next
-        current_node.next = new_node
-        return
-      current_node = current_node.next
-
+    try:
+      new_node = Node(new_value)
+      current_node = self.head
+      while current_node is not None:
+        if current_node.value is value:
+          new_node.next = current_node.next
+          current_node.next = new_node
+          return
+        current_node = current_node.next
+      raise TargetError
+    except TargetError:
+      raise TargetError
 
 
   def __str__(self):
     """
     Returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
     """
-    values = []
-    node = self.head
-    while node is not None:
-        values.append("{ " + str(node.value) +" }")
-        node = node.next
-    if len(values) == 0:
-        return "NULL"
-    return " -> ".join(values) + " -> NULL"
+    try:
+      values = []
+      node = self.head
+      while node is not None:
+          values.append("{ " + str(node.value) +" }")
+          node = node.next
+      if len(values) == 0:
+          return "NULL"
+      return " -> ".join(values) + " -> NULL"
+    except TargetError:
+      raise TargetError
