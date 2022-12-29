@@ -20,14 +20,60 @@ Goal is to create a program that allows us to create a linked list using a `Node
       * Arguments: value
       * Returns: Boolean
       * Function: Indicates whether that value exists as a Node’s value somewhere within the list.
-    * `to_string`
+    * `__str__`
       * Arguments: none
       * Returns: a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
+    * `append`
+      * Arguments: value
+      * Returns: nothing
+      * Function: Adds a new node to the end of the linked list
+    * `insert_before`
+      * Arguments: value, new_value
+      * Returns: nothing
+      * Function: Inserts a new_value into the linked list immediately before the node containing `value`
+    * `insert_after`
+      * Arguments: value, new_value
+      * Returns: nothing
+      * Function: Inserts a `new_value` into the linked list immediately after the node containing `value`
 
 ## Approach & Efficiency
 
 * The `Node` class is used to create a node for use in a singly linked list
 * The `LinkedList` class is used to add nodes to our list using the `Node` class
+* Big O Notation
+  * `insert`
+    * Time: O(1)
+    * Space: O(1)
+  * `includes`
+    * Time: O(n)
+    * Space: O(1)
+  * `__str__`
+    * Time: O(n)
+    * Space: O(n)
+  * `append`
+    * Time: O(n)
+    * Space: O(1)
+  * `insert_before`
+    * Time: O(n)
+    * Space: O(1)
+  * `insert_after`
+    * Time: O(n)
+    * Space: O(1)
+
+## API
+
+* Application contains the following methods within the `LinkedList` class:
+  * `insert`
+    * Arguments: value
+    * Returns: nothing
+    * Function: Adds a new node with that value to the head of the list with an O(1) Time performance.
+  * `includes`
+    * Arguments: value
+    * Returns: Boolean
+    * Function: Indicates whether that value exists as a Node’s value somewhere within the list.
+  * `to_string`
+    * Arguments: none
+    * Returns: a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
 
 ## Tests
 

@@ -34,11 +34,11 @@ class LinkedList:
     Indicates whether that value exists as a Node’s value somewhere within the list.
     """
     try:
-      node = self.head
-      while node is not None:
-          if node.value == value:
+      current_node = self.head
+      while current_node is not None:
+          if current_node.value == value:
               return True
-          node = node.next
+          current_node = current_node.next
       return False
     except TargetError:
       raise TargetError
