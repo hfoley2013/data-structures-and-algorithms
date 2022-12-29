@@ -41,3 +41,64 @@ Tests conducted looked for the following:
 4. Can successfully insert a node before the first node of a linked list
 5. Can successfully insert after a node in the middle of the linked list
 6. Can successfully insert a node after the last node of the linked list
+
+## Solution
+
+```py
+def append(self, value):
+  """
+  Takes a value as a parameter and appends it to the end of the list.
+  """
+  try:
+
+    new_node = Node(value)
+    current_node = self.head
+
+    while current_node.next is not None:
+      current_node = current_node.next
+    current_node.next = new_node
+  except TargetError:
+    raise TargetError
+
+def insert_before(self, value, new_value):
+  """
+  Takes a value and new_value as arguments and inserts the new_value immediately before the node containing the existing value.
+  """
+  try:
+    new_node = Node(new_value)
+    current_node = self.head
+    previous_node = None
+    if current_node is None:
+      raise TargetError
+    if current_node.value is value:
+      self.head = new_node
+      new_node.next = current_node
+      return
+    while current_node is not None:
+      if current_node.value is value:
+        new_node.next = current_node
+        previous_node.next = new_node
+        return
+      previous_node = current_node
+      current_node = current_node.next
+    raise TargetError
+  except TargetError:
+    raise TargetError
+
+def insert_after(self, value, new_value):
+  """
+  Takes a value and new_value as arguments and inserts the new_value immediately after the node containing the existing value.
+  """
+  try:
+    new_node = Node(new_value)
+    current_node = self.head
+    while current_node is not None:
+      if current_node.value is value:
+        new_node.next = current_node.next
+        current_node.next = new_node
+        return
+      current_node = current_node.next
+    raise TargetError
+  except TargetError:
+    raise TargetError
+```
