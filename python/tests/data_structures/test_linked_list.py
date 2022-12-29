@@ -73,22 +73,3 @@ def test_includes_false():
     linked_list.insert("banana")
 
     assert not linked_list.includes("cucumber")
-
-# def test_to_string():
-#     linked_list = LinkedList()
-#     linked_list.insert(1)
-#     linked_list.insert(2)
-#     linked_list.insert(3)
-
-#     assert linked_list.to_string() == "3 -> 2 -> 1 -> NULL"
-
-# def test_to_string_one_node():
-#     linked_list = LinkedList()
-#     linked_list.insert(1)
-
-#     assert linked_list.to_string() == "1 -> NULL"
-
-# def test_to_string_no_nodes():
-#     linked_list = LinkedList()
-
-#     assert linked_list.to_string() == "NULL"

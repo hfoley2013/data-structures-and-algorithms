@@ -93,6 +93,35 @@ class LinkedList:
       raise TargetError
 
 
+  def kth_from_end(self, k):
+    """
+    Returns the value located at the kth position in the linked list.
+    """
+
+    steps_behind = 0
+    leader = self.head
+    follower = None
+
+    if leader is None:
+      raise TargetError
+
+    while leader:
+      leader = leader.next
+      if follower:
+        follower = follower.next
+      elif steps_behind == k:
+        follower = self.head
+      else:
+        steps_behind += 1
+
+    if not follower:
+      raise TargetError
+
+    return follower.value
+
+
+
+
   def __str__(self):
     """
     Returns a string representing all the values in the Linked List, formatted as: "{ a } -> { b } -> { c } -> NULL"
