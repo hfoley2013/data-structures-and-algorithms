@@ -48,8 +48,10 @@ class LinkedList:
     Takes a value as a parameter and appends it to the end of the list.
     """
     try:
+
       new_node = Node(value)
       current_node = self.head
+
       while current_node.next is not None:
         current_node = current_node.next
       current_node.next = new_node
@@ -57,6 +59,9 @@ class LinkedList:
       raise TargetError
 
   def insert_before(self, value, new_value):
+    """
+    Takes a value and new_value as arguments and inserts the new_value immediately before the node containing the existing value.
+    """
     try:
       new_node = Node(new_value)
       current_node = self.head
@@ -79,6 +84,9 @@ class LinkedList:
       raise TargetError
 
   def insert_after(self, value, new_value):
+    """
+    Takes a value and new_value as arguments and inserts the new_value immediately after the node containing the existing value.
+    """
     try:
       new_node = Node(new_value)
       current_node = self.head
@@ -118,8 +126,6 @@ class LinkedList:
       raise TargetError
 
     return follower.value
-
-
 
 
   def __str__(self):
