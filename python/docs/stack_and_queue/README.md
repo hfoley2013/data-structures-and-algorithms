@@ -111,6 +111,7 @@ Create a `Node`, `Stack`, and `Queue` class that allow for the full functionalit
 
 ## Checklist
 
+* [ ] Update root README
 * Node
   * [ ] value
   * [ ] next
