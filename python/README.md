@@ -84,3 +84,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Linked List Insertions](docs/linked_list_insertions)
 * [Linked List kth From End](docs/linked_list_kth)
 * [Linked List Zip](docs/linked_list_zip)
+* [Stacks and Queues](docs/stack_and_queue)
