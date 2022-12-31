@@ -111,21 +111,21 @@ Create a `Node`, `Stack`, and `Queue` class that allow for the full functionalit
 
 ## Checklist
 
-* [ ] Update root README
+* [X] Update root README
 * Node
-  * [ ] value
-  * [ ] next
-* [ ] Stack
-  * [ ] `push`
-  * [ ] `pop`
-  * [ ] `peek`
-  * [ ] `is_empty`
-* [ ] Queue
-  * [ ] `queue`
-  * [ ] `dequeue`
-  * [ ] `peek`
-  * [ ] `is_empty`
-* [ ] All tests passing
-  * [ ] Happy Path - Expected Path
-  * [ ] Expected Failure
-  * [ ] Edge Cases
+  * [X] value
+  * [X] next
+* [X] Stack
+  * [X] `push`
+  * [X] `pop`
+  * [X] `peek`
+  * [X] `is_empty`
+* [X] Queue
+  * [X] `queue`
+  * [X] `dequeue`
+  * [X] `peek`
+  * [X] `is_empty`
+* [X] All tests passing
+  * [X] Happy Path - Expected Path
+  * [X] Expected Failure
+  * [X] Edge Cases
