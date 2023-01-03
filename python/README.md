@@ -86,3 +86,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Linked List Zip](docs/linked_list_zip)
 * [Stacks and Queues](docs/stack_and_queue)
 * [PseudoQueue](docs/stack_queue_pseudo)
+* [AnimalShelter](docs/stack_queue_animal_shelter)
