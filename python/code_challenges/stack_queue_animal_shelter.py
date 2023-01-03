@@ -16,6 +16,19 @@ class AnimalShelter:
         self.rear = new_animal
 
     def dequeue(self, pref):
+
+        # If they don't want a cat or dog, return none
+        if pref is not 'cat' and pref is not 'dog':
+            return None
+
+        # If they have no preference, return the first in the queue
+        if pref is None:
+            temp = self.front
+            self.front = temp.next
+            temp.next = None
+            adopted_animal = temp
+            return adopted_animal
+
         # While the animal is not the preferred animal, remove to the holding pen
         holding_pen = []
         adopted_animal = None
@@ -29,7 +42,7 @@ class AnimalShelter:
         temp = self.front
         self.front = temp.next
         temp.next = None
-        adopted_animal = temp.species
+        adopted_animal = temp
 
         # Move holding pen animals back to shelter
         num_held = len(holding_pen)
@@ -67,3 +80,5 @@ if __name__ == '__main__':
     print(f"dir: {dir(cat)}")
     shelter.enqueue(cat)
     print(f"front: {shelter.front}")
+    print(f"species: {shelter.front.species}")
+    shelter.dequeue('cat')
