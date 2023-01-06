@@ -88,3 +88,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [PseudoQueue](docs/stack_queue_pseudo)
 * [AnimalShelter](docs/stack_queue_animal_shelter)
 * [Brackets](docs/stack_queue_brackets/)
+* [Trees](docs/trees)
