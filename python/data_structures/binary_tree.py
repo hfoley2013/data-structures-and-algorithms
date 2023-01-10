@@ -31,19 +31,6 @@ class BinaryTree:
             node = node.right
         return values
 
-    def breadth_first(self):
-        values = []
-        queue = [self.root]
-        while queue:
-            node = queue.pop(0)
-            values.append(node.value)
-            if node.left:
-                queue.append(node.left)
-            if node.right:
-                queue.append(node.right)
-        return values
-
-
     def post_order(self):
         values = []
         stack = [self.root]
