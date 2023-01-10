@@ -89,3 +89,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [AnimalShelter](docs/stack_queue_animal_shelter)
 * [Brackets](docs/stack_queue_brackets/)
 * [Trees](docs/trees)
+* [Trees: Find Max Value](docs/tree_max)
