@@ -90,3 +90,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Brackets](docs/stack_queue_brackets/)
 * [Trees](docs/trees)
 * [Trees: Find Max Value](docs/tree_max)
+* [Trees: Breadth First Search](docs/tree_breadth_first)
