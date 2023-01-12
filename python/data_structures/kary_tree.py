@@ -1,6 +1,5 @@
 from data_structures.queue import Queue
 
-
 class KaryTree:
     def __init__(self, root=None):
         self.root = root
@@ -24,6 +23,6 @@ class KaryTree:
 class Node:
     """K-Ary Tree Node"""
 
-    def __init__(self, value):
+    def __init__(self, value, children=None):
         self.value = value
-        self.children = []
+        self.children = children or []
