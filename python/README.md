@@ -92,3 +92,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Trees: Find Max Value](docs/tree_max)
 * [Trees: Breadth First Search](docs/tree_breadth_first)
 * [Trees: Fizz-Buzz](docs/tree_fizz_buzz)
+* [Hashtable](docs/hashtable)
