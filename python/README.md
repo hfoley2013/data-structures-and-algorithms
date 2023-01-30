@@ -93,3 +93,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Trees: Breadth First Search](docs/tree_breadth_first)
 * [Trees: Fizz-Buzz](docs/tree_fizz_buzz)
 * [Hashtable](docs/hashtable)
+* [Hashtable: First Repeated Word](docs/hashtable_repeated_word)
