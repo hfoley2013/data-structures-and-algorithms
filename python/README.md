@@ -94,3 +94,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 * [Trees: Fizz-Buzz](docs/tree_fizz_buzz)
 * [Hashtable](docs/hashtable)
 * [Hashtable: First Repeated Word](docs/hashtable_repeated_word)
+* [Trees: Tree Intersection](docs/tree_intersection)
